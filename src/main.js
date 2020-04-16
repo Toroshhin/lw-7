@@ -1,4 +1,5 @@
-window.onload = function () {
+import './styles.css'
+window.onload = function() {
 
   let listingElements = ['apple', 'orange'];
   let storeElements = [];
@@ -68,40 +69,40 @@ window.onload = function () {
   let sortButton = document.querySelector('#sort-button');
   //let deleteListingButton = document.querySelector('#delete-button');
 
-  addButton.onclick = function () {
+  addButton.onclick = function() {
     let selectedOption = document.querySelector('.listing-select option:checked');
     addToStoreElements(selectedOption.innerText);
     updateUI();
   }
 
-  addListingButton.onclick = function () {
+  addListingButton.onclick = function() {
     selectListing = document.querySelector('.listing-select');
     addToListingElements();
     updateUI();
   }
 
   //delete selected item from listing
-  deleteListingButton.onclick = function () {
+  deleteListingButton.onclick = function() {
     var selectedOption = document.querySelector('.listing-select option:checked');
     deleteListingElement(selectedOption.innerText);
     updateUI();
   }
 
   //delete selected item from store
-  deleteStoreButton.onclick = function () {
+  deleteStoreButton.onclick = function() {
     var selectedOption = document.querySelector('.store-select option:checked');
     deleteStoreElement(selectedOption.innerText);
     updateUI();
   }
 
   //clear selected item
-  clearButton.onclick = function () {
+  clearButton.onclick = function() {
     clearSelected();
     updateUI();
   }
 
   //sort selected item from store
-  sortButton.onclick = function () {
+  sortButton.onclick = function() {
     storeElements.sort();
     updateUI();
   }
